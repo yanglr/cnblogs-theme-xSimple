@@ -6,7 +6,7 @@
         <li class="sB-comment">
             <a href="#blog-comments-placeholder" onclick="$('#tbCommentBody').focus();" class="ff-t" title="添加评论"></a>
         </li>
-        <li class="sB-share"><a onclick="if(document.location.href.indexOf('/p/') > 0 || document.location.href.indexOf('/archive/') > 0 || document.location.href.indexOf('/articles') > 0 || document.location.href.indexOf('/diary/') > 0) {AddToWz(cb_entryId);} else { AddToWz($('.postTitle2')[0].href.substring(0, $('.postTitle2')[0].href.length-5).split('/').slice(-1)[0]); } " href="javascript:void(0);" title="收藏"></a></li>
+        <li class="sB-share"><a onclick="if(document.location.href.indexOf('/p/') > 0) {AddToWz(cb_entryId);} else { AddToWz($('.postTitle2')[0].href.substring(0, $('.postTitle2')[0].href.length-5).split('/').slice(-1)[0]); } " href="javascript:void(0);" title="收藏"></a></li>
         <li class="sB-goTop" id="goTop" style="display: list-item;">
             <a href="#mainContent" title="回顶部"></a>
         </li>
@@ -22,7 +22,7 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	$("#cnblogs_post_body").append('<br/><hr/><div id="signature" style="background: url(//www.cnblogs.com/images/cnblogs_com/enjoy233/1389971/o_user_warning.png) #e5f1f4 no-repeat 1% 50%; border-top: #e0e0e0 1px dashed;    border-right: #e0e0e0 1px dashed;    border-bottom: #e0e0e0 1px dashed;    border-left: #e0e0e0 1px dashed;    padding-top: 10px;    padding-right: 10px;    padding-bottom: 10px;    padding-left: 75px;">   作者：<a href="http://www.cnblogs.com/enjoy233/" target="_blank" title="Enjoy233的博客" style="color: brown">Bravo Yeung</a><br>    出处：<a href="http://www.cnblogs.com/Enjoy233/" target="_blank" title="http://www.cnblogs.com/Enjoy233/" style="color: blue">http://www.cnblogs.com/Enjoy233/</a>    <br>如果您觉得阅读本文对您有帮助，请点击一下右下方的<b style="color: blue; font-size: 16px">推荐</b>按钮，您的<b style="color: blue; font-size: 16px">推荐</b>将是我写作的最大动力！    <br>版权声明：本文为博主原创或转载文章，欢迎转载，<b>但转载文章之后必须在文章页面明显位置注明出处</b>，否则保留追究法律责任的权利。</div>');
+	$("#cnblogs_post_body").append('<br/><hr/><div id="signature" style="background: url(//www.cnblogs.com/images/cnblogs_com/enjoy233/1389971/o_user_warning.png) #e5f1f4 no-repeat 1% 50%; border-top: #e0e0e0 1px dashed;    border-right: #e0e0e0 1px dashed;    border-bottom: #e0e0e0 1px dashed;    border-left: #e0e0e0 1px dashed;    padding-top: 10px;    padding-right: 10px;    padding-bottom: 10px;    padding-left: 70px; font-size: 13.5px;">   作者：<a href="http://www.cnblogs.com/enjoy233/" target="_blank" title="Enjoy233的博客" style="color: brown">Bravo Yeung</a><br>    出处：<a href="http://www.cnblogs.com/Enjoy233/" target="_blank" title="http://www.cnblogs.com/Enjoy233/" style="color: blue">http://www.cnblogs.com/Enjoy233/</a>    <br>如果您觉得阅读本文对您有帮助，请点击一下右下方的<b style="color: blue; font-size: 16px">推荐</b>按钮，您的<b style="color: blue; font-size: 16px">推荐</b>将是我写作的最大动力！    <br>版权声明：本文为博主原创或转载文章，欢迎转载，<b>但转载文章之后必须在文章页面明显位置注明出处</b>，否则保留追究法律责任的权利。</div>');
 });
 </script>
 
@@ -79,20 +79,17 @@ $(document).ready(function(){
 }
 </style>
 
-<!-- 更新导航栏的菜单-->
+<script src="//cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js"></script>
+
 <script>
     $(function(){
-            $("#navigator").append('<div id="shwtop" >    <ul style="margin-left:5px;margin-right: 5px;">       <div class="dropdown">            <a href="#" class="dropbtn">后台管理</a>            <div class="dropdown-content">                <!-- <a class="menu" href="这里是你文章或随笔分类的链接地址，自己修改下面同理"> 这里更改下拉具体内容 </a> -->                <a class="menu" href="http://i.cnblogs.com/Configure.aspx"  target="_blank">GUI配置</a>                <a class="menu" href="http://i.cnblogs.com/posts" target="_blank">博文列表</a>                <a class="menu" href="http://wz.cnblogs.com/" target="_blank">网摘夹</a>                               <a class="menu" href="http://i.cnblogs.com/Files.aspx" target="_blank">文件</a>   <a class="menu" href="https://i.cnblogs.com/EditGalleries.aspx" target="_blank">相册</a>          </div>        </div>    </ul></div>');
+     // markdown模式下为代码加入行号
+     hljs.initHighlightingOnLoad();
+     hljs.initLineNumbersOnLoad();
+         
+      $('#footer').append('<div id="customFooter">            Powered By             <a href="https://www.cnblogs.com" target="_blank">Cnblogs</a> |             <a href="https://github.com/yanglr/cnblogs-theme-xSimple" target="_blank" title="Fork theme on github">Extremely Simple</a>  Theme By             <a href="https://www.cnblogs.com/enjoy233" target="_blank">Enjoy233</a>, Basic skin - <a href="//www.cnblogs.com/SkinUser.aspx?SkinName=LessIsMore" target="_blank">Less is More</a>.</div><br>');        
 
-        $("#navList").append('<li id="nav_home"><a id="enjoy233_ing" rel="nofollow" href="https://ing.cnblogs.com/" target="_blank" title="进入我的闪存">闪存</a></li>');
-        $("#navList").append('<li id="nav_follow"><a id="enjoy233_followee" rel="nofollow" href="http://home.cnblogs.com/followees/" target="_blank" title="进入我的关注">我关注</a></li>');          
-
-        $('#navList')[0].children["nav_contact"].innerHTML='<a id="nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/Enjoy233">私信</a>';
-        $('#navList')[0].children["nav_rss"].innerHTML='<a id="nav_rss" class="menu" rel="nofollow" href="https://www.cnblogs.com/enjoy233/rss">RSS订阅</a>';
-        
-        $('#footer').append('<div id="customFooter">            Powered By             <a href="https://www.cnblogs.com" target="_blank">Cnblogs</a> |             <a href="https://github.com/yanglr/cnblogs-theme-xSimple" target="_blank" title="Fork theme on github">Extremely Simple</a>,             Theme By             <a href="https://www.cnblogs.com/enjoy233" target="_blank">Enjoy233</a>, Basic skin - <a href="//www.cnblogs.com/SkinUser.aspx?SkinName=LessIsMore" target="_blank">Less is More</a>.</div><br>');        
-
-        });
+     });
 </script>
 
 <!-- tctip 支付赞赏/打赏 -->
@@ -114,7 +111,6 @@ $(document).ready(function(){
             }
         ]
     }).init()
-});
 </script>
 
 <!-- Baidu Share BEGIN -->
@@ -129,9 +125,9 @@ $(document).ready(function(){
 <a href="#" class="bds_kaixin001" data-cmd="kaixin001" title="分享到开心网"></a>
 <a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a>
 </div> 
-<script type="text/javascript" id="bdshare_js" data="type=tools&uid=2883522" ></script> 
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=2883522" ></script> 
 <script type="text/javascript" id="bdshell_js"></script> 
 <script type="text/javascript"> 
-document.getElementById("bdshell_js").src = "//static.dmzj.com/baidushare/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000); 
+document.getElementById("bdshell_js").src = "//static.dmzj.com/baidushare/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000) 
 </script> 
 <!-- Baidu Share END -->
