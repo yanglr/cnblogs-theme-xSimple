@@ -100,7 +100,7 @@ a#green_channel_digg, a#green_channel_follow, a#green_channel_favorite, a#green_
     text-decoration: none;
     color: #fff;
     margin: auto;
-    width: 80px;
+    width: 60px;
     display: inline-block;
     line-height: 30px;
     font-size: 12px;
@@ -721,4 +721,35 @@ em {
 
 #footer a {
     color: #7DC5EB;
+}
+
+.cnblogs-markdown .hljs {
+    border: none !important;
+}
+
+.hljs-ln-numbers {
+    width: 60px;
+}
+
+.hljs-ln-line.hljs-ln-n {
+    padding-left: 5px;
+    width: 35px;
+}
+
+#cnblogs_post_body th, #cnblogs_post_body td, .cnblogs-post-body th, .cnblogs-post-body td {
+    border: none !important;
+    padding: 0;
+}
+
+.postCon {
+    font-size: 15px;
+}
+
+.cnblogs-markdown .hljs, .cnblogs-post-body .hljs {
+    font-family: "Consolas",sans-serif !important;
+    font-size: 15px! important;
+}
+
+#cnblogs_post_body table {
+    border: none !important;
 }
