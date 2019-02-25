@@ -6,7 +6,6 @@
 
 #customH1 {
    color: #85C2F2 !important;
-   margin-top:60px;
    font-size: 35px;
    text-align:center;
    -vendor-animation-duration: 3s;
@@ -15,11 +14,18 @@
 }
 
 #customH2 {
-   margin-top:80px;
    text-align:center;
    -vendor-animation-duration: 3s;
    -vendor-animation-delay: 2s;
    -vendor-animation-iteration-count: infinite;
+}
+
+a#myH1 {
+    color: #85C2F2 !important; 
+}
+
+a#myH1:hover {
+    color: orange !important; 
 }
 
 #customNav {
@@ -1279,7 +1285,7 @@ a:visited {
 }
 a:hover {
 	color: #F60;
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 a:active {
 	color: black;
