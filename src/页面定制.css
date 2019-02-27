@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-#header { 
-   display:none; 
-} 
+#header {
+     display: none;
+}
 
 #customH1 {
    color: #85C2F2 !important;
-   font-size: 35px;
+   font-size: 45px;
    text-align:center;
    -vendor-animation-duration: 3s;
    -vendor-animation-delay: 2s;
@@ -592,12 +592,33 @@ code {
     /* display: none; */
 }
 
+#tbCommentBody {
+    padding: 10px 120px 10px 10px;
+    border: 2px solid lightsteelblue;
+    height: 225px; /* 根据实际图片高度调整 */
+    min-height: 120px;
+    max-height: 500px;
+    width: 80%;
+    background-size: cover;
+    background: url(//files-cdn.cnblogs.com/files/enjoy233/kuawo1.gif) no-repeat right bottom;
+}
+
 .comment_bury {
 	display: none;
 }
 
+.comment_btn {
+    font-size: 12px;
+    line-height: 1.5 !important;
+    border-radius: 4px;
+}
+
 #comment_nav {
      margin-right: 135px !important;
+}
+
+#comment_form_container > p:nth-child(4) {
+     display: none;
 }
 
 /*外边距*/
@@ -899,13 +920,6 @@ td.hljs-ln-code {
     border-radius: 0.5em;
 }
 
-#col {
-    float: right;
-    background: #eee;
-    margin: 2em 0 0 0.5em;
-    padding: 3px;
-}
-
 a.toc-link {
     color: #2ca6cb !important;
 }
@@ -913,6 +927,7 @@ a.toc-link:hover {
     color: orange !important;
 }
 
+/* 兼容移动端 */
 @media screen and (max-width: 1000px) {
     #main {
         width: 100%;
@@ -920,17 +935,18 @@ a.toc-link:hover {
 }
 
 /* 设置新导航栏的样式 */
-#shwtop {
+#topNav {
     min-height: 1em;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
-#shwtop li {
+#topNav li {
     float: left;
 }
 
-#shwtop a {
+#topNav a {
     display: block;
+    font-size: 18px;
     padding-left:0.5em;
     padding-right:0.5em;
     line-height:2em;
@@ -938,34 +954,35 @@ a.toc-link:hover {
     border-right: 1px solid #999;
 }
 
-#shwtop > li a {
+#topNav > li a {
     color: #FFFFFF;
 }
 
-#shwtop a:link, #shwtop a:visited, #shwtop a:active {
+#topNav a:link, #topNav a:visited, #topNav a:active {
     color: #ccc;
 }
-#shwtop a:hover {
+#topNav a:hover {
     color: #7B68EE;
     padding-left:0.8em;
     padding-right:0.8em;
 }
 
-#shwtop ul {
+#topNav ul {
     margin: 0;
     padding: 0;
     background-color: #04A292;
     overflow: hidden; /*隐藏溢出的部分，保持一行*/
+    border-radius: 6px 6px 6px 6px;
 }
 
-#shwtop li {
+#topNav li {
     font-size: 1.2em;
     font-weight: bold;
     float: left;  /*左浮动*/
     margin-left: 5px;
 }
 
-    #shwtop li a, .dropbtn {
+    #topNav li a, .dropbtn {
         display: inline-block; /*设置成块*/
         color: white;
         text-align: center;
@@ -973,12 +990,12 @@ a.toc-link:hover {
     }
 
  /*鼠标移上去，改变背景颜色*/
-#shwtop li a:hover, .dropdown:hover .dropbtn {
+#topNav li a:hover, .dropdown:hover .dropbtn {
       background-color: #ede9e7f0;
       opacity: 0.5;
 }
 
-#shwtop .dropdown {
+#topNav .dropdown {
     /*
 display:inline-block将对象呈递为内联对象，
 但是对象的内容作为块对象呈递。
@@ -987,7 +1004,7 @@ display:inline-block将对象呈递为内联对象，
     display: inline-block;
 }
 
-#shwtop .dropdown-content {
+#topNav .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -995,18 +1012,19 @@ display:inline-block将对象呈递为内联对象，
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-    #shwtop .dropdown-content a {
+    #topNav .dropdown-content a {
         display: block;
         color: black;
+        font-size: 14px;
         padding: 0px 5px;
         text-decoration: none;
     }
 
-        #shwtop .dropdown-content a:hover {
-            background-color: #a1a1a1;
-        }
+#topNav .dropdown-content a:hover {
+    background-color: #a1a1a1;
+}
 
-#shwtop .dropdown:hover .dropdown-content {
+#topNav .dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -1101,11 +1119,6 @@ display:inline-block将对象呈递为内联对象，
         display: inline-block;
     }
 
-    .side_search:hover {
-        -webkit-box-shadow: 0 0 3px #999;
-        -moz-box-shadow: 0 0 3px #999
-    }
-
     .search_input {
         width: 210px;
         vertical-align: middle;
@@ -1117,21 +1130,18 @@ display:inline-block将对象呈递为内联对象，
         background-color: #fbfbfb;
     }
 
-    .delete_btn {
-        background: #fbfbfb;
-        margin-left: -6px;
-        border: 1px solid #fbfbfb;
-        border-radius: 0 3px 3px 0;
-        cursor: pointer;
-        display: inline-block;
-        vertical-align: middle;
-        color: red;
-        font-weight: bold;
-        width: 38px;
-        font-size: 25px;
-        height: 38px;
-        padding-bottom: inherit;
-    }
+.delete_btn {
+    background: transparent;
+    margin-left: -3px;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    color: #000;
+    font-weight: bold;
+    width: 35px;
+    font-size: 25px;
+    height: 35px;
+}
 
     .search_btn {
         border-radius: 3px 3px 3px 3px;
@@ -1168,13 +1178,6 @@ display:inline-block将对象呈递为内联对象，
 
     .search_btn2:hover {
         background: #DEB887
-    }
-
-    input, button, textarea, select, optgroup, option {
-        font-family: inherit;
-        font-size: inherit;
-        font-style: inherit;
-        font-weight: inherit;
     }
 
 .asideMdContents {
@@ -1291,3 +1294,15 @@ a:active {
 	color: black;
 	text-decoration: none;
 }
+
+/* 不显示日历中的下划线 */
+u {
+    text-decoration: none;
+}
+
+.tocCol {
+     float: right;
+     background: #eee;
+     margin: 2em 0 0 0.5em;
+     padding: 3px;
+ }
