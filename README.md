@@ -33,28 +33,13 @@
 
 这是一款前端小白也能快速上手的给力博客园主题~
 
-[本人博客园博客](https://www.cnblogs.com/enjoy233/)的所有代码在此github项目的`src`文件夹中~
-
-**源码使用步骤：**
-
-1. 打开 博客后台管理 → “设置”
-2. 在博客皮肤选项卡中将博客皮肤设置为： `LessIsMore`
-3. 将`src`文件夹下的页面定制.css 复制到 页面定制CSS代码 代码框内
-4. 将同一文件夹下的 页首.html 复制到 页首Html代码 代码框内
-5. 将同一文件夹下的 页尾.html 复制到 页脚Html代码 代码框内
-6. 保存，即可见效。
+[本人博客园博客](https://www.cnblogs.com/enjoy233/)的所有代码在此github项目的[src文件夹](https://github.com/yanglr/cnblogs-theme-xSimple/tree/master/src)中~
 
 ## 准备工作
 
 1. 首先你得有个cnblogs博客
 2. 申请js权限
 
-**附该美化过程的github项目:**
-[yanglr/Beautify-cnblogs: Beautify-cnblogs](https://github.com/yanglr/Beautify-cnblogs)
-
-欢迎fork或star~
-
-本博客的所有代码在此github项目的`src`文件夹中~
 
 **源码使用步骤：**
 
@@ -64,7 +49,6 @@
 4. 将同一文件夹下的 页首.html 复制到 页首Html代码 代码框内
 5. 将同一文件夹下的 页尾.html 复制到 页脚Html代码 代码框内
 6. 保存，即可见效。
-
 
 ### js权限申请
 
@@ -77,13 +61,11 @@
 也可发个邮件到[contact@cnblogs.com](mailto:contact@cnblogs.com)申请js权限。
 
 
-
 **申请时内容模板已为你备好:**
 
 > 尊敬的博客园管理员：
 >
 > 本人请求申请开通js权限，希望能够把博客修饰的漂亮点，点缀自定义js插件效果，希望管理员可以批准，多谢~
-
 
 
 提交完申请，会弹出提示:
@@ -96,19 +78,7 @@
 
 ## 如何模仿一个博客园的自定义风格(样式css+动态效果js)?
 
-模仿一个cnblogs的全局css，只需打开Chrome浏览器，按下F12，找里面的skin css和custom css，例如：
-
-```css
-<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/LessIsMore/bundle-LessIsMore.css?...">
-
-<link type="text/css" rel="stylesheet" href="/blog/customcss/198996.css?v=...">
-```
-
-
-
-
-补充完整前缀：<http://www.cnblogs.com>，使用ref将该两个css引用到自己的博客中，即可进行大概样子的模仿，其他部分需要细调。
-
+模仿一个cnblogs的全局css，只需打开Chrome浏览器，按下F12，找里面的skin css和custom css。
 
 
 ## markdown样式自定义
