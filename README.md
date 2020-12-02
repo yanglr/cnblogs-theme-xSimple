@@ -28,6 +28,11 @@
   * [复制文字时自动加版权](#复制文字时自动加版权)
   * [隐藏博文右下角的"反对"](#隐藏博文右下角的反对)
 
+
+<br/>
+
+欢迎访问作者的个人网站: [极客中心](https://www.geekzl.com)
+
 # cnblogs-theme-xSimple
 博客园主题-Extremely Simple(极简)
 
